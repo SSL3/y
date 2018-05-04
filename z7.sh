@@ -163,14 +163,15 @@ service nginx restart
 #rm -f /root/pass.txt
 cd
 
-# install badvpn
-wget -O /usr/bin/badvpn-udpgw $source/debian7/badvpn-udpgw
-if [[ $OS == "x86_64" ]]; then
-  wget -O /usr/bin/badvpn-udpgw $source/debian7/badvpn-udpgw64
-fi
-sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /etc/rc.local
-chmod +x /usr/bin/badvpn-udpgw
-screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300
+# Install BadVPN
+apt-get -y install cmake make gcc
+wget http://www.borneobesthosting.me/Debian7/badvpn-1.999.127.tar.bz2
+tar xf badvpn-1.999.127.tar.bz2
+mkdir badvpn-build
+cd badvpn-build
+cmake ~/badvpn-1.999.127 -DBUILD_NOTHING_BY_DEFAULT=1 -DBUILD_UDPGW=1
+make install
+screen badvpn-udpgw --listen-addr 127.0.0.1:7300 > /dev/null &
 cd
 
 # install mrtg
@@ -194,25 +195,24 @@ if [ -x /usr/bin/mrtg ] && [ -r /etc/mrtg.cfg ]; then mkdir -p /var/log/mrtg ; e
 cd
 
 # setting port ssh
-#sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
-#sed -i '/Port 22/a Port 80' /etc/ssh/sshd_config
-#sed -i '/Port 22/a Port 143' /etc/ssh/sshd_config
 sed -i '/Port 22/a Port 143' /etc/ssh/sshd_config
 sed -i 's/Port 22/Port  22/g' /etc/ssh/sshd_config
 sed -i '$ i\Banner bannerssh' /etc/ssh/sshd_config
 service ssh restart
 
-# install dropbear
-#apt-get -y update
-#apt-get -y install dropbear
-#sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
-#sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=443/g' /etc/default/dropbear
-#sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109 -p 110"/g' /etc/default/dropbear
-#echo "/bin/false" >> /etc/shells
-#echo "/usr/sbin/nologin" >> /etc/shells
-#service ssh restart
-#service dropbear restart
+# update OpenSSH
+wget http://www.borneobesthosting.me/Debian7/openssh-7.5p1-openssl-1.1.0-1.patch
+wget http://www.borneobesthosting.me/Debian7/openssh-7.5p1.tar.gz
+tar -xf openssh-7.5p1.tar.gz
+cd openssh-7.5p1
+patch -Np1 -i ../openssh-7.5p1-openssl-1.1.0-1.patch && ./configure --prefix=/usr --sysconfdir=/etc/ssh --with-md5-passwords && make && make install
+# configure ssh
+sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
+sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
+sed -i '/Port 22/a Port 2020' /etc/ssh/sshd_config
 
+
+# install dropbear
 apt-get install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=442/g' /etc/default/dropbear
@@ -228,7 +228,6 @@ mv ./bannerssh /bannerssh
 chmod 0644 /bannerssh
 service dropbear restart
 service ssh restart
-
 
 # upgade dropbear 2017.75
 apt-get install zlib1g-dev

@@ -121,16 +121,16 @@ clear
 echo "" | lolcat
 echo "" | lolcat
 echo "" | lolcat
-echo "            --[ SELAMAT DATANG  DI VPS MuLuu09 ]--"| boxes -d dog | lolcat
+echo "            --[ SELAMAT DATANG  DI VPS borneovpshosting ]--"| boxes -d dog | lolcat
 echo "            ====================================================="| lolcat
-echo "            #           WhatsApp     : +601131731782            #"| lolcat
-echo "            #           Telegram     : MuLuu09                  #"| lolcat
-echo "            #           Facebook     : fb.com/mhd.fazren        #"| lolcat
-echo "            #           InstaGram    : mhdfazren_               #"| lolcat
+echo "            #           WhatsApp     : +60109475453             #"| lolcat
+echo "            #           Telegram     : @orangkuatsabahanterkini #"| lolcat
+echo "            #           Facebook     :  -                       #"| lolcat
+echo "            #           InstaGram    : -                        #"| lolcat
 echo "            #---------------------------------------------------#"| lolcat
 echo "            #     Silahkan ketik [menu] ENTER untuk pilihan     #"| lolcat
 echo "            #---------------------------------------------------#"| lolcat
-echo "            #         Copyright: © MuLuu09™ Premium 2017        #"| lolcat
+echo "            #    Copyright: © borneovpshosintg™ Premium 2017    #"| lolcat
 echo "            ====================================================="| lolcat
 date +"                            %A, %d-%m-%Y" | lolcat
 date +"                                 %H:%M:%S %Z" | lolcat

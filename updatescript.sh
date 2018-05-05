@@ -40,14 +40,14 @@ wget -q -O IP $source/debian7/IP.txt
 if ! grep -w -q $MYIP IP; then
 	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
 	if [[ $vps = "zvur" ]]; then
-		echo "Hubungi: editor borneovpshosting"
-	
-		echo "Hubungi: editor borneovpshosting"
+		echo "Hubungi: DEVELOPED BY borneovpshosting"
+	else
+		echo "Hubungi: DEVELOPED BY borneovpshosting"
 	fi
 	rm -f /root/IP
-	rm -f /root/IPcarding
 	exit
 fi
+
 rm /root/IP
 #echo "Maaf.. Saat ini belum tersedia update script bos......!!!" | boxes -d boy
 #echo "Update webmin tersedia bos, tp versi webmin 1.820_all.deb..gk apa2 ya boss.." | lolcat

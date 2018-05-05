@@ -3,7 +3,7 @@
 #vps="zvur";
 vps="aneka";
 
-source="https://raw.githubusercontent.com/mappakkoe09/y"
+source="http://borneovpshosting.com/autoscript"
 
 
 # go to root

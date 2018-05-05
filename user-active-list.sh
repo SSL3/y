@@ -23,7 +23,7 @@ clear
 
 
 
-echo "DEVELOPED BY MuLuu09 atau (+601131731782)"
+echo "DEVELOPED BY Borneovpshosting"
 echo ""
 
 cat /root/activeuser.txt

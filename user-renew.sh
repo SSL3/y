@@ -16,7 +16,7 @@ fi
 
 echo "----------------- TAMBAH MASA AKTIF AKUN SSH --------------------"
 
-	echo "        DEVELOPED BY MuLuu09 atau (+601131731782)           "
+	echo "        DEVELOPED BY Borneovpshosting           "
 echo ""
 
 # begin of user-list
@@ -70,7 +70,7 @@ echo -e "   DI LARANG:                              "| lolcat
 echo -e "   HACKING-DDOS-PHISING-SPAM-TORENT        " | lolcat
 echo -e "   CARDING-CRIMINAL CYBER.                 "| lolcat
 echo -e "===========================================" | lolcat
-echo -e "   Script by MuLuu09        "       | lolcat
+echo -e "   Script by Borneovpshosting        "       | lolcat
 echo -e "   Config OVPN:                            "| lolcat
 echo -e "   http://$MYIP:81/client.ovpn        " | lolcat
 echo -e "-------------------------------------------" | lolcat

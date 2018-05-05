@@ -39,9 +39,9 @@ wget -q -O IPcarding $source/debian7/IPcarding.txt
 if ! grep -w -q $MYIP IPcarding; then
 	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
 	if [[ $vps = "zvur" ]]; then
-		echo "Hubungi: editor MuLuu09"
+		echo "Hubungi: Admin Borneovpshosting"
 	else
-		echo "Hubungi: editor MuLuu09"
+		echo "Hubungi: Admin Borneovpshosting"
 	fi
 	rm -f /root/IPcarding
 	rm /root/IPcarding
@@ -51,7 +51,7 @@ clear
 echo "####################################
 # Uniscan project                  #
 # http://uniscan.sourceforge.net/  #
-# edited MuLuu09                   #
+# edited Borneovpshosting           #
 ####################################
 
 

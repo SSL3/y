@@ -17,7 +17,7 @@ fi
 
 echo "------------------- MEMBUAT AKUN  PPTP VPN ----------------------" | lolcat
 
-	echo "          DEVELOPED BY MuLuu09 atau (+601131731782)            " | lolcat
+	echo "          DEVELOPED BY Borneovpshosting            " | lolcat
 echo ""
 
 read -p "Isikan username baru: " username

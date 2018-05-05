@@ -39,9 +39,9 @@ wget -q -O IP $source/debian7/IP.txt
 if ! grep -w -q $MYIP IP; then
 	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
 	if [[ $vps = "zvur" ]]; then
-		echo "Hubungi: editor MuLuu09 atau (+601131731782)"
+		echo "Hubungi: editor borneovpshosting  "
 	else
-		echo "Hubungi: editor MuLuu09 atau (+601131731782)"
+		echo "Hubungi: editor borneovpshosting "
 	fi
 	rm /root/IP
 	rm -f /root/IP

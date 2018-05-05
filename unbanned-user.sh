@@ -24,7 +24,7 @@ clear
 echo "---------------------- UNBANNED AKUN SSH ----------------------"
 
 	echo "                                       "
-	echo "                           EDITED MuLuu09 MappakkoE                           "
+	echo "                           EDITED Borneovpshosting                          "
 	echo "                              "
 
 

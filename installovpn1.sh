@@ -28,7 +28,7 @@ vps="aneka";
 #if [[ $vps = "zvur" ]]; then
 	#source="http://"
 #else
-	source="https://raw.githubusercontent.com/SSL3/y"
+	source="http://borneovpshosting.com/autoscript"
 #fi
 
 # go to root

@@ -18,7 +18,7 @@ fi
 vps="aneka";
 
 
-	source="https://raw.githubusercontent.com/mappakkoe09/y"
+	source="http://borneovpshosting.com/autoscript"
 
 
 # go to root
@@ -29,9 +29,9 @@ wget -q -O IP $source/debian7/IP.txt
 if ! grep -w -q $MYIP IP; then
 	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
 	if [[ $vps = "zvur" ]]; then
-		echo "Hubungi: DEVELOPED BY MuLuu09 atau (+601131731782)"
+		echo "Hubungi: DEVELOPED BY borneovpshosting"
 	else
-		echo "Hubungi: DEVELOPED BY MuLuu09 atau (+601131731782)"
+		echo "Hubungi: DEVELOPED BY borneovpshosting"
 	fi
 	rm -f /root/IP
 	exit

@@ -29,7 +29,7 @@ vps="aneka";
 #if [[ $vps = "zvur" ]]; then
 	#source="http://"
 #else
-	source="https://raw.githubusercontent.com/mappakkoe09/y"
+	source="http://borneovpshosting.com/autoscript"
 #fi
 
 # go to root
@@ -40,9 +40,9 @@ wget -q -O IP $source/debian7/IP.txt
 if ! grep -w -q $MYIP IP; then
 	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
 	if [[ $vps = "zvur" ]]; then
-		echo "Hubungi: editor MuLuu09 atau (+601131731782)"
-	else
-		echo "Hubungi: editor MuLuu09 atau (+601131731782)"
+		echo "Hubungi: editor borneovpshosting"
+	
+		echo "Hubungi: editor borneovpshosting"
 	fi
 	rm -f /root/IP
 	rm -f /root/IPcarding

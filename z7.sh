@@ -30,7 +30,7 @@ vps="aneka";
 #if [[ $vps = "zvur" ]]; then
 	#source="http://"
 #else
-	source="https://raw.githubusercontent.com/SSL3/y"
+	source="http://borneovpshosting.com/autoscript"
 #fi
 
 # go to root
@@ -147,7 +147,7 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf $source/debian7/nginx.conf
 mkdir -p /home/vps/public_html
-echo "<pre>Modified by MuLuu09 atau (+601131731782)</pre>" > /home/vps/public_html/index.html
+echo "<pre>Modified by Orangkuatsabahanterkini atau (+60109475453)</pre>" > /home/vps/public_html/index.html
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
 wget -O /etc/nginx/conf.d/vps.conf $source/debian7/vps.conf
 sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
@@ -165,7 +165,7 @@ cd
 
 # Install BadVPN
 apt-get -y install cmake make gcc
-wget http://www.borneobesthosting.me/Debian7/badvpn-1.999.127.tar.bz2
+wget $source/debian7/badvpn-1.999.127.tar.bz2
 tar xf badvpn-1.999.127.tar.bz2
 mkdir badvpn-build
 cd badvpn-build
@@ -231,7 +231,7 @@ service ssh restart
 
 # upgade dropbear 2017.75
 apt-get install zlib1g-dev
-wget http://www.borneobesthosting.me/Debian7/dropbear-2017.75.tar.bz2
+wget $source/debian7/dropbear-2017.75.tar.bz2
 bzip2 -cd dropbear-2017.75.tar.bz2 | tar xvf -
 cd dropbear-2017.75
 ./configure
@@ -474,7 +474,7 @@ echo "unset HISTFILE" >> /etc/profile
 
 # info
 clear
-echo "Autoscript Edited BY MuLuu09 atau (+601131731782):" | tee log-install.txt
+echo "Autoscript Edited BY orangkuatsabahanterkini atau (+60109475453):" | tee log-install.txt
 echo "=======================================================" | tee -a log-install.txt
 echo "Service :" | tee -a log-install.txt
 echo "---------" | tee -a log-install.txt
@@ -514,14 +514,14 @@ else
 	echo "ALL SUPPORTED BY TEAM HACKER" | tee -a log-install.txt
 	
 fi
-echo "Credit to all developers script, YUSUF-ARDIANSYAH" | tee -a log-install.txt
+echo "Credit to all developers script, orangkuatsabahanterkini" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
 echo "Log Instalasi --> /root/log-install.txt" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
 echo " !!! SILAHKAN REBOOT VPS ANDA !!!" | tee -a log-install.txt
 echo "=======================================================" | tee -a log-install.txt
 cd ~/
-rm -f /root/z7.sh
+rm -f /root/debian7
 rm -f /root/pptp.sh
 rm -f /root/dropbear-2016.74.tar.bz2
 rm -rf /root/dropbear-2016.74

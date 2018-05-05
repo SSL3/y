@@ -18,7 +18,7 @@ fi
 echo "------------------------ MEMBUAT AKUN SSH ------------------------"| lolcat
 
 
-	echo "           DEVELOPED BY MuLuu09 atau (+601131731782)           " | lolcat
+	echo "           DEVELOPED BY Borneovpshosting           " | lolcat
 echo ""
 
 read -p "Isikan username: " username
@@ -57,7 +57,7 @@ echo -e "   DI LARANG:                              "| lolcat
 echo -e "   HACKING-DDOS-PHISING-SPAM-TORENT        " | lolcat
 echo -e "   CARDING-CRIMINAL CYBER.                 "| lolcat
 echo -e "===========================================" | lolcat
-echo -e "   Script by MuLuu09              "| lolcat
+echo -e "   Script by Borneovpshosting              "| lolcat
 echo -e "   Config OVPN:                            "| lolcat
 echo -e "   http://$MYIP:81/client.ovpn        " | lolcat
 echo -e "-------------------------------------------" | lolcat
